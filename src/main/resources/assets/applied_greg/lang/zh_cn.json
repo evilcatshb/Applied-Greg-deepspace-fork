@@ -1,0 +1,11 @@
+{
+  "key_type.applied_greg.eu_energy": "EU能量",
+  "key.applied_greg.eu_energy": "EU能量",
+  
+  "item.applied_greg.eu_energy_cell_4k": "4k EU能量存储单元",
+  "item.applied_greg.eu_energy_cell_16k": "16k EU能量存储单元",
+  "item.applied_greg.eu_energy_cell_64k": "64k EU能量存储单元",
+  "item.applied_greg.eu_energy_cell_256k": "256k EU能量存储单元",
+  "item.applied_greg.eu_energy_cell_1024k": "1024k EU能量存储单元",
+  "item.applied_greg.eu_energy_cell_4096k": "4096k EU能量存储单元"
+}
