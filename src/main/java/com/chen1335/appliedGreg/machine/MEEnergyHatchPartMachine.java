@@ -10,6 +10,7 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.capability.recipe.IO;
 import com.gregtechceu.gtceu.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gtceu.api.machine.TickableSubscription;
+import com.gregtechceu.gtceu.api.machine.trait.NotifiableEnergyContainer;
 import com.gregtechceu.gtceu.common.machine.multiblock.part.EnergyHatchPartMachine;
 import com.gregtechceu.gtceu.integration.ae2.machine.feature.IGridConnectedMachine;
 import com.gregtechceu.gtceu.integration.ae2.machine.trait.GridNodeHolder;
@@ -17,11 +18,9 @@ import com.lowdragmc.lowdraglib.syncdata.annotation.DescSynced;
 import com.lowdragmc.lowdraglib.syncdata.annotation.Persisted;
 import com.lowdragmc.lowdraglib.syncdata.field.ManagedFieldHolder;
 import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 /**
  * LV ME 能源仓 - 从AE网络提取EU能量并为GT多方块机器供电
@@ -49,14 +48,20 @@ public class MEEnergyHatchPartMachine extends EnergyHatchPartMachine implements 
 
     protected final IActionSource actionSource;
 
-    private static final long MAX_TRANSFER_PER_TICK = GTValues.V[GTValues.LV];
-
     protected TickableSubscription autoIOSubs;
 
     public MEEnergyHatchPartMachine(IMachineBlockEntity holder, int tier, IO io, int amperage) {
         super(holder, tier, io, amperage);
         this.nodeHolder = createNodeHolder();
         this.actionSource = IActionSource.ofMachine(nodeHolder.getMainNode()::getNode);
+    }
+
+
+    @Override
+    protected NotifiableEnergyContainer createEnergyContainer(Object... args) {
+        NotifiableEnergyContainer container = super.createEnergyContainer(args);
+        container.setCapabilityValidator(Objects::isNull);
+        return container;
     }
 
     @Override
@@ -77,11 +82,6 @@ public class MEEnergyHatchPartMachine extends EnergyHatchPartMachine implements 
     public void onMainNodeStateChanged(IGridNodeListener.State reason) {
         IGridConnectedMachine.super.onMainNodeStateChanged(reason);
         updateSubscription();
-    }
-
-    @Override
-    public boolean shouldOpenUI(Player player, InteractionHand hand, BlockHitResult hit) {
-        return false;
     }
 
     @Override
@@ -123,6 +123,9 @@ public class MEEnergyHatchPartMachine extends EnergyHatchPartMachine implements 
         }
 
         MEStorage networkInv = grid.getStorageService().getInventory();
+        if (networkInv == null) {
+            return;
+        }
         long energyStored = energyContainer.getEnergyStored();
         if (io == IO.IN) {
             long energyNeeded = energyContainer.getEnergyCapacity() - energyStored;
@@ -145,6 +148,7 @@ public class MEEnergyHatchPartMachine extends EnergyHatchPartMachine implements 
 
             if (extracted > 0) {
                 energyContainer.removeEnergy(extracted);
+
             }
         }
     }

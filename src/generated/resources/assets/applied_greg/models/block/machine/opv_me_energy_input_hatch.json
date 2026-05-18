@@ -10,7 +10,7 @@
   "variants": {
     "is_formed=false": {
       "model": {
-        "parent": "gtceu:block/machine/part/energy_input_hatch",
+        "parent": "applied_greg:block/machine/part/me_energy_input_hatch",
         "textures": {
           "bottom": "gtceu:block/casings/voltage/opv/bottom",
           "side": "gtceu:block/casings/voltage/opv/side",
@@ -20,7 +20,7 @@
     },
     "is_formed=true": {
       "model": {
-        "parent": "gtceu:block/machine/part/energy_input_hatch",
+        "parent": "applied_greg:block/machine/part/me_energy_input_hatch",
         "textures": {
           "bottom": "gtceu:block/casings/voltage/opv/bottom",
           "side": "gtceu:block/casings/voltage/opv/side",

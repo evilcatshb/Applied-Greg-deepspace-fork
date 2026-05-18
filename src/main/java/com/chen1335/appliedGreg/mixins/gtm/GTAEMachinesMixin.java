@@ -1,5 +1,6 @@
 package com.chen1335.appliedGreg.mixins.gtm;
 
+import com.chen1335.appliedGreg.AppliedGreg;
 import com.chen1335.appliedGreg.definitions.AGMachines;
 import com.gregtechceu.gtceu.common.data.machines.GTAEMachines;
 import org.spongepowered.asm.mixin.Mixin;

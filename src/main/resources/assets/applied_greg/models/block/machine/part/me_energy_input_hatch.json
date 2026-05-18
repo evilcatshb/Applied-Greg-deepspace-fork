@@ -1,0 +1,6 @@
+{
+  "parent": "gtceu:block/machine/part/energy_input_hatch",
+  "textures": {
+    "overlay_tint": "applied_greg:block/overlay/overlay_me_energy_2a_tinted"
+  }
+}

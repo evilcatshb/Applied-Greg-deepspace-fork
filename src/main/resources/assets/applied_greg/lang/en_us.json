@@ -40,6 +40,7 @@
   "item.applied_greg.eu_energy_cell_4096k": "4096k EU Energy Storage Cell",
   "tooltip.applied_greg.StoredEU": "Stored EU:%s",
   "tooltip.applied_greg.me_energy_input_hatch": "Extract energy from the AE network",
-  "tooltip.applied_greg.me_energy_output_hatch": "Input energy into the AE network"
+  "tooltip.applied_greg.me_energy_output_hatch": "Input energy into the AE network",
+  "itemGroup.applied_greg": "Applied Greg"
 
 }
