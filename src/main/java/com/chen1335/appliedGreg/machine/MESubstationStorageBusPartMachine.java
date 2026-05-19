@@ -13,7 +13,6 @@ import com.chen1335.appliedGreg.mixinHooks.gtm.PowerSubstationMachineAccessor;
 import com.gregtechceu.gtceu.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gtceu.api.machine.feature.multiblock.IMultiController;
 import com.gregtechceu.gtceu.api.machine.multiblock.part.MultiblockPartMachine;
-import com.gregtechceu.gtceu.api.machine.trait.NotifiableEnergyContainer;
 import com.gregtechceu.gtceu.api.machine.trait.RecipeLogic;
 import com.gregtechceu.gtceu.common.machine.multiblock.electric.PowerSubstationMachine;
 import com.gregtechceu.gtceu.integration.ae2.machine.feature.IGridConnectedMachine;
@@ -36,6 +35,7 @@ public class MESubstationStorageBusPartMachine extends MultiblockPartMachine imp
     protected final GridNodeHolder nodeHolder;
     private PowerSubstationMachineAccessor powerSubstationAccessor;
 
+    private PowerSubstationMachine powerSubstationMachine;
     private final PowerSubstationMEStorage storage = new PowerSubstationMEStorage(this);
 
 
@@ -52,11 +52,24 @@ public class MESubstationStorageBusPartMachine extends MultiblockPartMachine imp
 
     @Override
     public void addedToController(@NotNull IMultiController controller) {
-        if (controller instanceof PowerSubstationMachine powerSubstationMachine) {
+        if (controller instanceof PowerSubstationMachine machine) {
+            this.powerSubstationMachine = machine;
             this.powerSubstationAccessor = (PowerSubstationMachineAccessor) powerSubstationMachine;
             this.powerSubstationAccessor.AG$getTickSubscription().updateSubscription();
         }
         super.addedToController(controller);
+    }
+
+    private boolean canUse() {
+        RecipeLogic.Status status = powerSubstationMachine.recipeLogic.getStatus();
+        return powerSubstationMachine != null && powerSubstationMachine.isFormed() && powerSubstationMachine.isWorkingEnabled();
+    }
+
+    private PowerSubstationMachine.PowerStationEnergyBank getEnergyBank() {
+        if (powerSubstationAccessor == null) {
+            return null;
+        }
+        return powerSubstationAccessor.AG$getEnergyBank();
     }
 
     @Override
@@ -95,13 +108,6 @@ public class MESubstationStorageBusPartMachine extends MultiblockPartMachine imp
     protected static class PowerSubstationMEStorage implements MEStorage {
         private final MESubstationStorageBusPartMachine machine;
 
-        private PowerSubstationMachine.PowerStationEnergyBank getEnergyBank() {
-            if (machine.powerSubstationAccessor == null) {
-                return null;
-            }
-            return machine.powerSubstationAccessor.AG$getEnergyBank();
-        }
-
         private void addNetOutLastSec(long amount) {
             if (machine.powerSubstationAccessor != null) {
                 machine.powerSubstationAccessor.AG$addNetOutLastSec(amount);
@@ -120,8 +126,8 @@ public class MESubstationStorageBusPartMachine extends MultiblockPartMachine imp
 
         @Override
         public long extract(AEKey what, long amount, Actionable mode, IActionSource source) {
-            PowerSubstationMachine.PowerStationEnergyBank energyBank = getEnergyBank();
-            if (what == EUEnergyKey.INSTANCE && energyBank != null && this.machine.isFormed()) {
+            PowerSubstationMachine.PowerStationEnergyBank energyBank = machine.getEnergyBank();
+            if (what == EUEnergyKey.INSTANCE && energyBank != null && this.machine.isFormed() && machine.canUse()) {
                 BigInteger stored = energyBank.getStored();
                 long extracted = stored.min(BigInteger.valueOf(amount)).longValue();
                 if (mode == Actionable.MODULATE) {
@@ -135,8 +141,8 @@ public class MESubstationStorageBusPartMachine extends MultiblockPartMachine imp
 
         @Override
         public long insert(AEKey what, long amount, Actionable mode, IActionSource source) {
-            PowerSubstationMachine.PowerStationEnergyBank energyBank = getEnergyBank();
-            if (what == EUEnergyKey.INSTANCE && energyBank != null && this.machine.isFormed()) {
+            PowerSubstationMachine.PowerStationEnergyBank energyBank = machine.getEnergyBank();
+            if (what == EUEnergyKey.INSTANCE && energyBank != null && this.machine.isFormed() && machine.canUse()) {
                 BigInteger canInsert = energyBank.getCapacity().subtract(energyBank.getStored());
                 long inserted = canInsert.min(BigInteger.valueOf(amount)).longValue();
                 if (mode == Actionable.MODULATE) {
@@ -155,7 +161,7 @@ public class MESubstationStorageBusPartMachine extends MultiblockPartMachine imp
 
         @Override
         public void getAvailableStacks(KeyCounter out) {
-            PowerSubstationMachine.PowerStationEnergyBank energyBank = getEnergyBank();
+            PowerSubstationMachine.PowerStationEnergyBank energyBank = machine.getEnergyBank();
             if (energyBank != null) {
                 out.add(EUEnergyKey.INSTANCE, energyBank.getStored().longValue());
             }

@@ -1,0 +1,6 @@
+{
+  "parent": "gtceu:block/machine/template/part/hatch_machine",
+  "textures": {
+    "overlay": "applied_greg:block/overlay/overlay_me_power_substation_bus"
+  }
+}

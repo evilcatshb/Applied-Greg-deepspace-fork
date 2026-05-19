@@ -3,7 +3,7 @@
   "package": "com.chen1335.appliedGreg.mixins",
   "compatibilityLevel": "JAVA_17",
   "refmap": "kaleidoscope_end.refmap.json",
-  "mixins": ["ae2.PatternDetailsHelperMixin", "gtm.GTAEMachinesMixin", "gtm.PowerSubstationMachineMixin"],
+  "mixins": ["ae2.PatternDetailsHelperMixin", "gtm.DiodePartMachineAccessor", "gtm.PowerSubstationMachineMixin"],
   "client": [],
   "server": [],
   "injectors": {

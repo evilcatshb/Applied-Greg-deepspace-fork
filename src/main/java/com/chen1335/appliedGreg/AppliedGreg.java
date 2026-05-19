@@ -2,19 +2,16 @@ package com.chen1335.appliedGreg;
 
 import appeng.api.stacks.AEKeyTypes;
 import com.chen1335.appliedGreg.api.EUEnergyKeyType;
-import com.chen1335.appliedGreg.data.DataMain;
 import com.chen1335.appliedGreg.definitions.AGItems;
 import com.chen1335.appliedGreg.definitions.AGMachines;
-import com.gregtechceu.gtceu.GTCEu;
-import com.gregtechceu.gtceu.api.GTValues;
+import com.gregtechceu.gtceu.api.GTCEuAPI;
+import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs;
-import com.gregtechceu.gtceu.common.data.GTMachines;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,7 +22,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegisterEvent;
 import org.slf4j.Logger;
 
-import static com.gregtechceu.gtceu.common.registry.GTRegistration.REGISTRATE;
+import java.lang.reflect.Type;
 
 @Mod(AppliedGreg.MODID)
 public class AppliedGreg {
@@ -40,9 +37,9 @@ public class AppliedGreg {
                             .build())
             .register();
 
+
     public AppliedGreg(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-
         AGItems.ITEM_DEFERRED_REGISTER.register(modEventBus);
         modEventBus.addListener((RegisterEvent event) -> {
             if (!event.getRegistryKey().equals(Registries.BLOCK)) {
@@ -50,16 +47,21 @@ public class AppliedGreg {
             }
             AEKeyTypes.register(EUEnergyKeyType.INSTANCE);
         });
-        modEventBus.addListener(DataMain::runData);
         modEventBus.register(this);
-        REGISTRATE.defaultCreativeTab((ResourceKey<CreativeModeTab>) null);
         LOGGER.info("Applied Greg initialized!");
     }
 
     @SubscribeEvent
     public void FMLConstructModEvent(FMLConstructModEvent event) {
         event.enqueueWork(REGISTRATE::registerRegistrate);
-        event.enqueueWork(DataMain::init);
+    }
+
+    @SubscribeEvent
+    public void onGTRegister(GTCEuAPI.RegisterEvent<?, ?> event) {
+        Type genericType = event.getGenericType();
+        if (genericType.equals(MachineDefinition.class)) {
+            AGMachines.init();
+        }
     }
 
 

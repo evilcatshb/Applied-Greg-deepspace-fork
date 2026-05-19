@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "applied_greg:block/machine/me_power_substation_storage_bus",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "applied_greg:block/machine/me_power_substation_storage_bus",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "applied_greg:block/machine/me_power_substation_storage_bus"
+    },
+    "facing=south": {
+      "model": "applied_greg:block/machine/me_power_substation_storage_bus",
+      "y": 180
+    },
+    "facing=up": {
+      "gtceu:z": 180,
+      "model": "applied_greg:block/machine/me_power_substation_storage_bus",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "applied_greg:block/machine/me_power_substation_storage_bus",
+      "y": 270
+    }
+  }
+}

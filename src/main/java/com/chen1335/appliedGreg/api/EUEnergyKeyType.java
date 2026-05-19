@@ -32,14 +32,12 @@ public class EUEnergyKeyType extends AEKeyType {
     
     @Override
     public int getAmountPerOperation() {
-        // 每次操作传输的能量量（EU）
-        return 8192;
+        return 4096;
     }
     
     @Override
     public int getAmountPerByte() {
-        // 每字节可以存储的EU数量
-        return 8192;
+        return 4096;
     }
     
     @Override

@@ -2,52 +2,63 @@ package com.chen1335.appliedGreg.definitions;
 
 import appeng.core.definitions.AEItems;
 import appeng.items.materials.MaterialItem;
-import appeng.items.storage.BasicStorageCell;
 import com.chen1335.appliedGreg.AppliedGreg;
 import com.chen1335.appliedGreg.crafting.pattern.EncodeAbleProcessingPatternItem;
 import com.chen1335.appliedGreg.items.EUEnergyStorageCell;
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class AGItems {
-
+    static {
+        AppliedGreg.REGISTRATE.creativeModeTab(() -> AppliedGreg.TAB);
+    }
     public static final DeferredRegister<Item> ITEM_DEFERRED_REGISTER =
             DeferredRegister.create(ForgeRegistries.ITEMS, AppliedGreg.MODID);
 
     public static final RegistryObject<EncodeAbleProcessingPatternItem> ENCODE_ABLE_PROCESSING_PATTERN_ITEM = ITEM_DEFERRED_REGISTER.register("encode_able_processing_pattern_item", EncodeAbleProcessingPatternItem::new);
 
-    public static final RegistryObject<Item> EU_CELL_HOUSING = ITEM_DEFERRED_REGISTER.register("eu_cell_housing", () -> new MaterialItem(new Item.Properties()));
+    public static final ItemEntry<MaterialItem> EU_CELL_HOUSING = AppliedGreg.REGISTRATE.item("eu_cell_housing", MaterialItem::new)
+            .defaultModel()
+            .lang("ME EU Cell Housing")
+            .register();
 
-    // EU能量存储单元 - 不同容量
-    // 4k = 可以存储约 4 * 1024 * 8192 = 33,554,432 EU
-    public static final RegistryObject<BasicStorageCell> EU_CELL_1K = ITEM_DEFERRED_REGISTER.register(
-            "eu_energy_cell_1k",
-            () -> new EUEnergyStorageCell(new Item.Properties().stacksTo(1), AEItems.CELL_COMPONENT_1K, EU_CELL_HOUSING.get(), 0.5f, 1)
-    );
 
-    // 4k = 可以存储约 4 * 1024 * 8192 = 33,554,432 EU
-    public static final RegistryObject<BasicStorageCell> EU_CELL_4K = ITEM_DEFERRED_REGISTER.register(
-            "eu_energy_cell_4k",
-            () -> new EUEnergyStorageCell(new Item.Properties().stacksTo(1), AEItems.CELL_COMPONENT_4K, EU_CELL_HOUSING.get(), 1f, 4)
-    );
+    public static final ItemEntry<EUEnergyStorageCell> EU_CELL_1K = AppliedGreg.REGISTRATE.item(
+                    "eu_storage_cell_1k",
+                    (properties) -> new EUEnergyStorageCell(properties.stacksTo(1), AEItems.CELL_COMPONENT_1K, EU_CELL_HOUSING.get(), 0.5f, 1))
 
-    // 16k = 可以存储约 134,217,728 EU
-    public static final RegistryObject<BasicStorageCell> EU_CELL_16K = ITEM_DEFERRED_REGISTER.register(
-            "eu_energy_cell_16k",
-            () -> new EUEnergyStorageCell(new Item.Properties().stacksTo(1), AEItems.CELL_COMPONENT_16K, EU_CELL_HOUSING.get(), 1.5f, 16)
-    );
+            .defaultModel()
+            .lang("1k ME EU Storage Cell")
+            .register();
 
-    // 64k = 可以存储约 536,870,912 EU
-    public static final RegistryObject<BasicStorageCell> EU_CELL_64K = ITEM_DEFERRED_REGISTER.register(
-            "eu_energy_cell_64k",
-            () -> new EUEnergyStorageCell(new Item.Properties().stacksTo(1), AEItems.CELL_COMPONENT_64K, EU_CELL_HOUSING.get(), 2f, 64)
-    );
+    public static final ItemEntry<EUEnergyStorageCell> EU_CELL_4K = AppliedGreg.REGISTRATE.item(
+                    "eu_storage_cell_4k",
+                    (properties) -> new EUEnergyStorageCell(properties.stacksTo(1), AEItems.CELL_COMPONENT_4K, EU_CELL_HOUSING.get(), 1f, 4))
+            .defaultModel()
+            .lang("4k ME EU Storage Cell")
+            .register();
 
-    // 256k = 可以存储约 2,147,483,648 EU
-    public static final RegistryObject<BasicStorageCell> EU_CELL_256K = ITEM_DEFERRED_REGISTER.register(
-            "eu_energy_cell_256k",
-            () -> new EUEnergyStorageCell(new Item.Properties().stacksTo(1), AEItems.CELL_COMPONENT_256K, EU_CELL_HOUSING.get(), 2.5f, 256)
-    );
+    public static final ItemEntry<EUEnergyStorageCell> EU_CELL_16K = AppliedGreg.REGISTRATE.item(
+                    "eu_storage_cell_16k",
+                    (properties) -> new EUEnergyStorageCell(properties.stacksTo(1), AEItems.CELL_COMPONENT_16K, EU_CELL_HOUSING.get(), 1.5f, 16))
+            .defaultModel()
+            .lang("16k ME EU Storage Cell")
+            .register();
+
+    public static final ItemEntry<EUEnergyStorageCell> EU_CELL_64K = AppliedGreg.REGISTRATE.item(
+                    "eu_storage_cell_64k",
+                    (properties) -> new EUEnergyStorageCell(properties.stacksTo(1), AEItems.CELL_COMPONENT_64K, EU_CELL_HOUSING.get(), 2f, 64))
+            .defaultModel()
+            .lang("64k ME EU Storage Cell")
+            .register();
+
+    public static final ItemEntry<EUEnergyStorageCell> EU_CELL_256K = AppliedGreg.REGISTRATE.item(
+                    "eu_storage_cell_256k",
+                    (properties) -> new EUEnergyStorageCell(properties.stacksTo(1), AEItems.CELL_COMPONENT_256K, EU_CELL_HOUSING.get(), 2.5f, 256))
+            .defaultModel()
+            .lang("256k ME EU Storage Cell")
+            .register();
 }

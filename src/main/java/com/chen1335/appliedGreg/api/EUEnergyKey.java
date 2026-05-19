@@ -54,7 +54,7 @@ public class EUEnergyKey extends AEKey {
     
     @Override
     public void writeToPacket(FriendlyByteBuf data) {
-        data.writeUtf(ID.toString());
+
     }
     
     @Override
