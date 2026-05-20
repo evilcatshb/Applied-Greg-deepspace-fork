@@ -56,7 +56,7 @@ public class AGRecipes {
                         .inputItems(GTMachines.ENERGY_INPUT_HATCH[i], 1)
                         .inputItems(transformer)
                         .inputItems(CIRCUITS_ARRAY[i], 1)
-                        .inputItems(AEParts.FE_P2P_TUNNEL.asItem(), 1)
+                        .inputItems(AEParts.ME_P2P_TUNNEL.asItem(), 1)
                         .outputItems(definition.asStack())
                         .duration(200).EUt(VA[EV]).save(provider);
             }
@@ -71,7 +71,7 @@ public class AGRecipes {
                         .inputItems(GTMachines.ENERGY_OUTPUT_HATCH[i], 1)
                         .inputItems(transformer)
                         .inputItems(CIRCUITS_ARRAY[i], 1)
-                        .inputItems(AEParts.FE_P2P_TUNNEL.asItem(), 1)
+                        .inputItems(AEParts.ME_P2P_TUNNEL.asItem(), 1)
                         .outputItems(definition.asStack())
                         .duration(200).EUt(VA[EV]).save(provider);
             }
@@ -85,7 +85,7 @@ public class AGRecipes {
                 ASSEMBLER_RECIPES.recipeBuilder(definition.getId())
                         .inputItems(diode, 1)
                         .inputItems(transformer)
-                        .inputItems(AEParts.FE_P2P_TUNNEL.asItem(), 1)
+                        .inputItems(AEParts.ME_P2P_TUNNEL.asItem(), 1)
                         .outputItems(definition.asStack())
                         .duration(200).EUt(VA[HV]).save(provider);
             }
@@ -97,7 +97,7 @@ public class AGRecipes {
                 .inputItems(GTMultiMachines.ACTIVE_TRANSFORMER, 1)
                 .inputItems(CustomTags.LuV_CIRCUITS, 4)
                 .inputItems(GTItems.POWER_INTEGRATED_CIRCUIT, 4)
-                .inputItems(AEParts.FE_P2P_TUNNEL.asItem(), 1)
+                .inputItems(AEParts.ME_P2P_TUNNEL.asItem(), 1)
                 .inputItems(wireFine, Europium, 32)
                 .inputItems(wireFine, Europium, 32)
                 .inputItems(wireFine, Europium, 32)
