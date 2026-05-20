@@ -118,7 +118,6 @@ public class AGMachines {
                     .register(),
             ALL_TIERS
     );
-
     public static void init() {
 
     }

@@ -55,11 +55,13 @@
   "item.applied_greg.eu_storage_cell_256k": "256k ME EU Storage Cell",
   "item.applied_greg.eu_storage_cell_4k": "4k ME EU Storage Cell",
   "item.applied_greg.eu_storage_cell_64k": "64k ME EU Storage Cell",
+  "item.applied_greg.programmable_processing_pattern": "Programmable Processing Pattern",
   "itemGroup.applied_greg": "Applied Greg",
   "key.applied_greg.eu_energy": "EU Energy",
   "key_type.applied_greg.eu_energy": "EU Energy",
   "tooltip.applied_greg.StoredEU": "Stored EU:%s",
   "tooltip.applied_greg.me_energy_input_hatch": "Extract energy from the AE network",
   "tooltip.applied_greg.me_energy_output_hatch": "Input energy into the AE network",
-  "tooltip.applied_greg.me_power_substation_storage_bus": "Allows Power Substation to receive or output energy through ME network"
+  "tooltip.applied_greg.me_power_substation_storage_bus": "Allows Power Substation to receive or output energy through ME network",
+  "applied_greg.tooltip.configuration": "§7Configuration: §r%s"
 }

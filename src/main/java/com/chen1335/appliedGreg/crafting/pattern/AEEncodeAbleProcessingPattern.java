@@ -22,4 +22,7 @@ public class AEEncodeAbleProcessingPattern extends AEProcessingPattern {
     }
 
 
+    public int getConfiguration() {
+        return configuration;
+    }
 }

@@ -12,10 +12,10 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class EncodeAbleProcessingPatternItem extends ProcessingPatternItem {
+public class ProgrammableProcessingPatternItem extends ProcessingPatternItem {
 
-    public EncodeAbleProcessingPatternItem() {
-        super(new Properties().stacksTo(1));
+    public ProgrammableProcessingPatternItem(Properties properties) {
+        super(properties);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class EncodeAbleProcessingPatternItem extends ProcessingPatternItem {
         if (tag == null) {
             return;
         }
-        lines.add(Component.translatable("greg_me_enhancement.tooltip.configuration", stack.getTag().getInt("Configuration")));
+        lines.add(Component.translatable("applied_greg.tooltip.configuration", stack.getTag().getInt("Configuration")));
     }
 
     @Override

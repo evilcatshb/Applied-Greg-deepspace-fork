@@ -24,7 +24,7 @@ public class PatternDetailsHelperMixinHooks {
         ArrayList<GenericStack> genericStacks = new ArrayList<>(Arrays.asList(in));
         genericStacks.removeIf(genericStack -> genericStack != null && genericStack.what() instanceof AEItemKey itemKey && itemKey.getItem() == GTItems.PROGRAMMED_CIRCUIT.asItem());
         if (configuration >= 0) {
-            cir.setReturnValue(AGItems.ENCODE_ABLE_PROCESSING_PATTERN_ITEM.get().encode(genericStacks.toArray(new GenericStack[]{}), out, configuration));
+            cir.setReturnValue(AGItems.PROGRAMMABLE_PROCESSING_PATTERN.get().encode(genericStacks.toArray(new GenericStack[]{}), out, configuration));
         }
 
     }

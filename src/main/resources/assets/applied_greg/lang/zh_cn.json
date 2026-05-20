@@ -61,5 +61,7 @@
   "tooltip.applied_greg.StoredEU": "已储存EU:%s",
   "tooltip.applied_greg.me_energy_input_hatch": "从AE网络取出能量",
   "tooltip.applied_greg.me_energy_output_hatch": "向AE网络输入能量",
-  "tooltip.applied_greg.me_power_substation_storage_bus": "使蓄能变电站可以通过ME网络接收或放出能量"
+  "tooltip.applied_greg.me_power_substation_storage_bus": "使蓄能变电站可以通过ME网络接收或放出能量",
+  "item.applied_greg.programmable_processing_pattern": "可编程处理样板",
+  "applied_greg.tooltip.configuration": "§7配置: §r%s"
 }

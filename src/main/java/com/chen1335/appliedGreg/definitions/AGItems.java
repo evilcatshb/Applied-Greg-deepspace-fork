@@ -3,22 +3,25 @@ package com.chen1335.appliedGreg.definitions;
 import appeng.core.definitions.AEItems;
 import appeng.items.materials.MaterialItem;
 import com.chen1335.appliedGreg.AppliedGreg;
-import com.chen1335.appliedGreg.crafting.pattern.EncodeAbleProcessingPatternItem;
+import com.chen1335.appliedGreg.crafting.pattern.ProgrammableProcessingPatternItem;
 import com.chen1335.appliedGreg.items.EUEnergyStorageCell;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 public class AGItems {
     static {
         AppliedGreg.REGISTRATE.creativeModeTab(() -> AppliedGreg.TAB);
     }
+
     public static final DeferredRegister<Item> ITEM_DEFERRED_REGISTER =
             DeferredRegister.create(ForgeRegistries.ITEMS, AppliedGreg.MODID);
 
-    public static final RegistryObject<EncodeAbleProcessingPatternItem> ENCODE_ABLE_PROCESSING_PATTERN_ITEM = ITEM_DEFERRED_REGISTER.register("encode_able_processing_pattern_item", EncodeAbleProcessingPatternItem::new);
+    public static final ItemEntry<ProgrammableProcessingPatternItem> PROGRAMMABLE_PROCESSING_PATTERN = AppliedGreg.REGISTRATE.item("programmable_processing_pattern", ProgrammableProcessingPatternItem::new)
+            .defaultModel()
+            .lang("Programmable Processing Pattern")
+            .register();
 
     public static final ItemEntry<MaterialItem> EU_CELL_HOUSING = AppliedGreg.REGISTRATE.item("eu_cell_housing", MaterialItem::new)
             .defaultModel()

@@ -1,47 +1,47 @@
-[205月2026 00:04:39.866] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, D:\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, applied_greg, --all, --output, E:\moddig\project\Greg ME Enhancement\1.20.1\src\generated\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\src\main\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\sources2\gtceu-sources, --mixin.config, mixins.applied_greg.json]
-[205月2026 00:04:39.891] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.13 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[205月2026 00:04:40.092] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[205月2026 00:04:40.176] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/D:/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[205月2026 00:04:40.570] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[205月2026 00:04:40.580] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[205月2026 00:04:40.588] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[205月2026 00:04:40.597] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
-[205月2026 00:04:41.149] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: ldlib. Using Mod File: D:\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\ldlib-626676\7809449_mapped_official_1.20.1\ldlib-626676-7809449_mapped_official_1.20.1.jar
-[205月2026 00:04:41.150] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 4 dependencies adding them to mods collection
-[205月2026 00:04:44.276] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[205月2026 00:04:44.312] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, D:\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, applied_greg, --all, --output, E:\moddig\project\Greg ME Enhancement\1.20.1\src\generated\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\src\main\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\sources2\gtceu-sources]
-[205月2026 00:04:44.438] [main/WARN] [mixin/]: Reference map 'kaleidoscope_end.refmap.json' for mixins.applied_greg.json could not be read. If this is a development environment you can ignore this message
-[205月2026 00:04:44.760] [main/INFO] [mixin/]: Remapping refMap emi-xplat-refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
-[205月2026 00:04:44.764] [main/INFO] [mixin/]: Remapping refMap configuration.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
-[205月2026 00:04:44.766] [main/INFO] [mixin/]: Remapping refMap jade.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
-[205月2026 00:04:44.772] [main/INFO] [mixin/]: Remapping refMap ldlib-common-1.20.1-ldlib-common-refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
-[205月2026 00:04:44.774] [main/INFO] [mixin/]: Remapping refMap ldlib-forge-1.20.1-ldlib-forge-refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
-[205月2026 00:04:44.778] [main/INFO] [mixin/]: Remapping refMap gtceu.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
-[205月2026 00:04:44.781] [main/INFO] [mixin/]: Remapping refMap ae2.mixins.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
-[205月2026 00:04:44.980] [main/WARN] [mixin/]: Error loading class: mezz/jei/library/load/PluginCaller (java.lang.ClassNotFoundException: mezz.jei.library.load.PluginCaller)
-[205月2026 00:04:46.089] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [applied_greg]
-[205月2026 00:04:46.091] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
-[205月2026 00:04:52.358] [main/WARN] [AE2:C/]: Unable to find class com.simibubi.create.foundation.ponder.PonderWorld. Integration with PonderJS disabled.
-[205月2026 00:04:53.241] [modloading-worker-0/INFO] [GregTechCEu/]: GregTechCEu is initializing...
-[205月2026 00:04:53.338] [modloading-worker-0/INFO] [LowDragLib/]: LowDragLib is initializing on platform: Forge
-[205月2026 00:04:53.784] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
-[205月2026 00:04:53.785] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
-[205月2026 00:04:53.837] [modloading-worker-0/INFO] [Configuration/FileWatching]: Registered configuration config for auto-sync function
-[205月2026 00:04:54.050] [modloading-worker-0/INFO] [com.chen1335.appliedGreg.AppliedGreg/]: Applied Greg initialized!
-[205月2026 00:04:54.113] [modloading-worker-0/INFO] [Configuration/FileWatching]: Registered gtceu config for auto-sync function
-[205月2026 00:04:54.128] [modloading-worker-0/INFO] [GregTechCEu/]: High-Tier is Enabled.
-[205月2026 00:04:54.852] [main/INFO] [GregTechCEu/]: GTCEu common proxy init!
-[205月2026 00:04:54.974] [main/INFO] [GregTechCEu/]: Registering material registries
-[205月2026 00:04:54.977] [main/INFO] [GregTechCEu/]: Registering GTCEu Materials
-[205月2026 00:04:55.362] [main/INFO] [GregTechCEu/]: Registering addon Materials
-[205月2026 00:04:57.001] [main/WARN] [GregTechCEu/]: FluidStorageKey{gtceu:liquid} already has an associated fluid for material gtceu:lava
-[205月2026 00:04:57.046] [main/WARN] [GregTechCEu/]: FluidStorageKey{gtceu:liquid} already has an associated fluid for material gtceu:milk
-[205月2026 00:04:57.234] [main/WARN] [GregTechCEu/]: FluidStorageKey{gtceu:liquid} already has an associated fluid for material gtceu:water
-[205月2026 00:04:59.193] [main/INFO] [GregTechCEu/]: Registering KeyBinds
-[205月2026 00:04:59.203] [main/WARN] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Mod 'gtceu' took 4.351 s to run a deferred task.
-[205月2026 00:05:02.005] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[205月2026 00:05:02.006] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[205月2026 00:05:02.334] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registrate Provider for applied_greg [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-[205月2026 00:05:03.438] [main/INFO] [net.minecraft.data.DataGenerator/]: Registrate Provider for applied_greg [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider] finished after 1102 ms
-[205月2026 00:05:03.438] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 1104 ms
-[205月2026 00:05:03.452] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 151, old count: 151, new count: 152, removed stale: 0, written: 2
+[215月2026 01:48:40.147] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, D:\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, applied_greg, --all, --output, E:\moddig\project\Greg ME Enhancement\1.20.1\src\generated\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\src\main\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\sources2\gtceu-sources, --mixin.config, mixins.applied_greg.json]
+[215月2026 01:48:40.161] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.13 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[215月2026 01:48:40.340] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[215月2026 01:48:40.408] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/D:/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[215月2026 01:48:40.851] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[215月2026 01:48:40.861] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[215月2026 01:48:40.872] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[215月2026 01:48:40.883] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
+[215月2026 01:48:41.451] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: ldlib. Using Mod File: D:\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\ldlib-626676\7809449_mapped_official_1.20.1\ldlib-626676-7809449_mapped_official_1.20.1.jar
+[215月2026 01:48:41.452] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 4 dependencies adding them to mods collection
+[215月2026 01:48:45.036] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[215月2026 01:48:45.078] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, D:\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, applied_greg, --all, --output, E:\moddig\project\Greg ME Enhancement\1.20.1\src\generated\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\src\main\resources, --existing, E:\moddig\project\Greg ME Enhancement\1.20.1\sources2\gtceu-sources]
+[215月2026 01:48:45.247] [main/WARN] [mixin/]: Reference map 'kaleidoscope_end.refmap.json' for mixins.applied_greg.json could not be read. If this is a development environment you can ignore this message
+[215月2026 01:48:45.588] [main/INFO] [mixin/]: Remapping refMap emi-xplat-refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
+[215月2026 01:48:45.592] [main/INFO] [mixin/]: Remapping refMap configuration.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
+[215月2026 01:48:45.593] [main/INFO] [mixin/]: Remapping refMap jade.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
+[215月2026 01:48:45.601] [main/INFO] [mixin/]: Remapping refMap ldlib-common-1.20.1-ldlib-common-refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
+[215月2026 01:48:45.603] [main/INFO] [mixin/]: Remapping refMap ldlib-forge-1.20.1-ldlib-forge-refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
+[215月2026 01:48:45.611] [main/INFO] [mixin/]: Remapping refMap gtceu.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
+[215月2026 01:48:45.614] [main/INFO] [mixin/]: Remapping refMap ae2.mixins.refmap.json using E:\moddig\project\Greg ME Enhancement\1.20.1\build/createSrgToMcp/output.srg
+[215月2026 01:48:45.858] [main/WARN] [mixin/]: Error loading class: mezz/jei/library/load/PluginCaller (java.lang.ClassNotFoundException: mezz.jei.library.load.PluginCaller)
+[215月2026 01:48:47.127] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [applied_greg]
+[215月2026 01:48:47.129] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[215月2026 01:48:54.135] [main/WARN] [AE2:C/]: Unable to find class com.simibubi.create.foundation.ponder.PonderWorld. Integration with PonderJS disabled.
+[215月2026 01:48:55.086] [modloading-worker-0/INFO] [GregTechCEu/]: GregTechCEu is initializing...
+[215月2026 01:48:55.204] [modloading-worker-0/INFO] [LowDragLib/]: LowDragLib is initializing on platform: Forge
+[215月2026 01:48:55.664] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
+[215月2026 01:48:55.666] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
+[215月2026 01:48:55.782] [modloading-worker-0/INFO] [Configuration/FileWatching]: Registered configuration config for auto-sync function
+[215月2026 01:48:55.842] [modloading-worker-0/INFO] [com.chen1335.appliedGreg.AppliedGreg/]: Applied Greg initialized!
+[215月2026 01:48:55.938] [modloading-worker-0/INFO] [Configuration/FileWatching]: Registered gtceu config for auto-sync function
+[215月2026 01:48:55.948] [modloading-worker-0/INFO] [GregTechCEu/]: High-Tier is Enabled.
+[215月2026 01:48:56.767] [main/INFO] [GregTechCEu/]: GTCEu common proxy init!
+[215月2026 01:48:56.883] [main/INFO] [GregTechCEu/]: Registering material registries
+[215月2026 01:48:56.884] [main/INFO] [GregTechCEu/]: Registering GTCEu Materials
+[215月2026 01:48:57.165] [main/INFO] [GregTechCEu/]: Registering addon Materials
+[215月2026 01:48:59.983] [main/WARN] [GregTechCEu/]: FluidStorageKey{gtceu:liquid} already has an associated fluid for material gtceu:lava
+[215月2026 01:49:00.073] [main/WARN] [GregTechCEu/]: FluidStorageKey{gtceu:liquid} already has an associated fluid for material gtceu:milk
+[215月2026 01:49:00.075] [main/WARN] [GregTechCEu/]: FluidStorageKey{gtceu:liquid} already has an associated fluid for material gtceu:water
+[215月2026 01:49:02.298] [main/INFO] [GregTechCEu/]: Registering KeyBinds
+[215月2026 01:49:02.311] [main/WARN] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Mod 'gtceu' took 5.543 s to run a deferred task.
+[215月2026 01:49:05.480] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[215月2026 01:49:05.490] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[215月2026 01:49:05.893] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registrate Provider for applied_greg [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+[215月2026 01:49:07.256] [main/INFO] [net.minecraft.data.DataGenerator/]: Registrate Provider for applied_greg [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider] finished after 1361 ms
+[215月2026 01:49:07.257] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 1367 ms
+[215月2026 01:49:07.274] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 152, old count: 151, new count: 148, removed stale: 5, written: 3

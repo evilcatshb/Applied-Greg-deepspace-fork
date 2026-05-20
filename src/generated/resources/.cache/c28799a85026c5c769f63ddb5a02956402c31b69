@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-20T00:05:03.439491	Registrate Provider for applied_greg [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+// 1.20.1	2026-05-21T01:49:07.258003	Registrate Provider for applied_greg [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
 45b53eab9f7bda4df7d59c0bf004c1cbbb5fba5d assets/applied_greg/blockstates/ev_me_diode.json
 b181bfe24f7577e5301d4e665203a87238b6f227 assets/applied_greg/blockstates/ev_me_energy_input_hatch.json
 e6c6b395e33f8a44095b942e99e75681e9fe0aab assets/applied_greg/blockstates/ev_me_energy_output_hatch.json
@@ -45,8 +45,8 @@ fa3de93590709659e7428a3d8e6c49be1150ff0f assets/applied_greg/blockstates/uxv_me_
 df4aa55acfd3b7bbb5c2c930fcbc1ffd6a90c4e9 assets/applied_greg/blockstates/zpm_me_diode.json
 e7887e9606276f05b23abaffb5fb547531a9f75b assets/applied_greg/blockstates/zpm_me_energy_input_hatch.json
 2ca3cc89d5ebdb8ccc443be7de188a3fd6090f43 assets/applied_greg/blockstates/zpm_me_energy_output_hatch.json
-766ca42ee94aae83e296ff176148890c5f748e4f assets/applied_greg/lang/en_ud.json
-1866de65b9a71af4171487e48a1d93ce41b3c6b1 assets/applied_greg/lang/en_us.json
+7f7894670d054e1f1200691f5b8efe83d83be487 assets/applied_greg/lang/en_ud.json
+f479bf8558def713c0d0135eb780e69062e215a5 assets/applied_greg/lang/en_us.json
 ea19db9c35150afdf02adb52459cdc1c61a67d87 assets/applied_greg/models/block/machine/ev_me_diode.json
 309178c03c05d3934a2e3033f7eb0de537444fbb assets/applied_greg/models/block/machine/ev_me_energy_input_hatch.json
 7b259ba804f76111e18f939744a9767c193f9c0e assets/applied_greg/models/block/machine/ev_me_energy_output_hatch.json
@@ -124,6 +124,7 @@ c0619236688641a2894398407c92f64898cccdcd assets/applied_greg/models/item/mv_me_e
 2b924742235334931bb4100967f01e0888ad1837 assets/applied_greg/models/item/opv_me_diode.json
 8f5ea2f3920490d798fa484650599d4eaeeeb62b assets/applied_greg/models/item/opv_me_energy_input_hatch.json
 b556f45fffbfa97818184f8e012afe546d88207d assets/applied_greg/models/item/opv_me_energy_output_hatch.json
+80156744f8596fb5f402efba862ef5a258a8396e assets/applied_greg/models/item/programmable_processing_pattern.json
 60ec85e3e421cdfa239b09a8978696eecdb4245e assets/applied_greg/models/item/uev_me_diode.json
 206ff351fb7eec51bff20df71129b05c9f3f18f5 assets/applied_greg/models/item/uev_me_energy_input_hatch.json
 133bb049639542f71546aabfd1e0e38fe7ebb5e2 assets/applied_greg/models/item/uev_me_energy_output_hatch.json
@@ -145,8 +146,3 @@ b34b2684ad50130bb41cd92bc8792d4d8013deed assets/applied_greg/models/item/uv_me_e
 2ba9f3221bef68deecbebee884b608ab098c22db assets/applied_greg/models/item/zpm_me_diode.json
 15198a80044c7dfd74d6d875d5c07a8e2406ac46 assets/applied_greg/models/item/zpm_me_energy_input_hatch.json
 9d4db43f7e99463ff9248b3592233ccf5c97829d assets/applied_greg/models/item/zpm_me_energy_output_hatch.json
-ab3ae6d629c9fa06669196692d1b04889465dbe3 data/gtceu/recipes/shapeless/eu_cell_16k.json
-c1b051106564a02cbd09dd046b88698fa2e88605 data/gtceu/recipes/shapeless/eu_cell_1k.json
-778f46b3fcd502472013a11ccf85596d81640be6 data/gtceu/recipes/shapeless/eu_cell_256k.json
-39888210214881251579b28ad18fde4c43812ee9 data/gtceu/recipes/shapeless/eu_cell_4k.json
-338d74fa3791c4a7f4955089f4fd9dbbec2b1370 data/gtceu/recipes/shapeless/eu_cell_64k.json
