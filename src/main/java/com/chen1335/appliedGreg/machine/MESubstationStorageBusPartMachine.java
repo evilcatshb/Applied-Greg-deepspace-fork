@@ -156,13 +156,13 @@ public class MESubstationStorageBusPartMachine extends MultiblockPartMachine imp
 
         @Override
         public Component getDescription() {
-            return Component.literal("AAA");
+            return Component.literal("Power Substation");
         }
 
         @Override
         public void getAvailableStacks(KeyCounter out) {
             PowerSubstationMachine.PowerStationEnergyBank energyBank = machine.getEnergyBank();
-            if (energyBank != null) {
+            if (energyBank != null && this.machine.isFormed() && machine.canUse()) {
                 out.add(EUEnergyKey.INSTANCE, energyBank.getStored().longValue());
             }
         }
