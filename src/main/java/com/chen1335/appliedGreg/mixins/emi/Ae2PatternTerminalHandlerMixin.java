@@ -1,4 +1,4 @@
-package com.chen1335.appliedGreg.mixins.gtm;
+package com.chen1335.appliedGreg.mixins.emi;
 
 import appeng.api.stacks.GenericStack;
 import com.chen1335.appliedGreg.mixinHooks.gtm.Ae2PatternTerminalHandlerHooks;

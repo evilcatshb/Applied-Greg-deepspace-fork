@@ -1,4 +1,4 @@
-package com.chen1335.appliedGreg.mixins.gtm;
+package com.chen1335.appliedGreg.mixins.gtceu;
 
 import com.chen1335.appliedGreg.mixinHooks.gtm.PowerSubstationMachineAccessor;
 import com.gregtechceu.gtceu.api.machine.ConditionalSubscriptionHandler;

@@ -1,4 +1,4 @@
-package com.chen1335.appliedGreg.mixins.gtm;
+package com.chen1335.appliedGreg.mixins.gtceu;
 
 import com.gregtechceu.gtceu.common.machine.multiblock.part.DiodePartMachine;
 import org.spongepowered.asm.mixin.Mixin;

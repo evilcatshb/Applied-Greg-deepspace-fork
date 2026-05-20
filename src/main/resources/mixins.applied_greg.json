@@ -1,9 +1,10 @@
 {
   "required": true,
   "package": "com.chen1335.appliedGreg.mixins",
+  "plugin": "com.chen1335.appliedGreg.mixins.MainMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "kaleidoscope_end.refmap.json",
-  "mixins": ["ae2.PatternDetailsHelperMixin", "ae2.PatternProviderLogicMixin", "gtm.Ae2PatternTerminalHandlerMixin", "gtm.DiodePartMachineAccessor", "gtm.PowerSubstationMachineMixin"],
+  "mixins": ["ae2.PatternDetailsHelperMixin", "ae2.PatternProviderLogicMixin", "emi.Ae2PatternTerminalHandlerMixin", "gtceu.DiodePartMachineAccessor", "gtceu.PowerSubstationMachineMixin"],
   "client": [],
   "server": [],
   "injectors": {
